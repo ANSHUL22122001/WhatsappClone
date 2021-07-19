@@ -1,0 +1,353 @@
+/* App.js */
+.app{
+    background-color: #262D31;
+    height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+
+
+
+/* Slider.js */
+.sidebar{ 
+    flex: 0.3;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color:#131C21;
+    border-right: 1px solid rgba(241,241,242,0.11);
+}
+.sidebar .sidebar_header{ 
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background-color: #2A2F32;
+    border-right: 1px solid rgba(241,241,242,0.11);
+}
+.sidebar .sidebar_header .sidebar_headerRight{ 
+    display: flex;
+    align-items: center;
+    min-width: 30px;
+    justify-content: space-between;
+}
+.sidebar .sidebar_header .sidebar_headerRight .MuiSvgIcon-root{ 
+    color: #b1b3b5;
+    margin: 8px;
+    margin-left: 14px;
+    border-radius:50%;
+    font-size: 24px !important;
+    margin-right: 10px;
+    cursor:pointer;
+}
+.sidebar .sidebar_header .sidebar_headerRight .MuiSvgIcon-root:hover{ 
+    background-color: #262D31;
+}
+.sidebar .sidebar_search{ 
+    padding: 2px 7px;
+    border-bottom: 1px solid rgba(241,241,242,0.11);
+}
+.sidebar .sidebar_search .sidebar_searchcontainer{ 
+    display: flex;
+    border-radius: 30px;
+    align-items: center;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #2A2F32;
+}
+.sidebar .sidebar_search .sidebar_searchcontainer .MuiSvgIcon-root{ 
+    color: #b1b3b5;
+    padding: 2px;
+    margin-right: 30px;
+}
+.sidebar .sidebar_search .sidebar_searchcontainer input{ 
+    border: none;
+    color: #b1b3b5;
+    outline: none;
+    background-color: #2A2F32;
+    font-size: 15px;
+}
+
+
+
+
+
+/* Sidebar.js */
+.sidebar .sidebar_chats {
+    flex: 1;
+    overflow-y: scroll;
+}
+.sidebar .sidebar_chats .SidebarChat{
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+.sidebar .sidebar_chats .AddSidebarChat{
+    display: flex;
+    color: white;
+    align-items: center;
+    border-bottom: 1px solid rgba(241,241,242,0.11);
+    padding: 0px 12px;
+    cursor: pointer;
+}
+.sidebar .sidebar_chats .AddSidebarChat:hover{
+    background-color: #262D31;
+}
+.sidebar .sidebar_chats .Addprofilepic{
+    background-color: #2A2F32;
+    border-radius: 50%;
+    align-items: center;
+    margin: 10px 0px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.sidebar .sidebar_chats .AddSidebarChat:hover> .Addprofilepic{
+    background-color: #131C21;
+}
+.sidebar .sidebar_chats .Addprofilepic .MuiSvgIcon-root{
+    font-size: 35px !important;
+    margin: 5px 5px;
+    margin-bottom: 0px;
+}
+.sidebar .sidebar_chats .SidebarChat:hover{
+    background-color: #262D31;
+}
+.sidebar .sidebar_chats .SidebarChat .profilepic{
+    margin-right: 15px;    
+    background-color: grey;
+    border-radius:50%;
+    padding: 4px;
+}
+.sidebar .sidebar_chats .SidebarChat .SidebarChat_info{
+    padding: 12px 20px;
+    padding-left: 0px;
+    border-bottom: 1px solid rgba(241,241,242,0.11);
+    width: 100%;
+}
+.sidebar .sidebar_chats .SidebarChat .SidebarChat_info h2{
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+.sidebar .sidebar_chats .SidebarChat .SidebarChat_info p{
+    font-size: 14px;
+    color: grey;
+}
+
+
+
+
+
+
+/* Chat.js */
+.chat{ 
+    flex: 0.7;
+    background-color:#131C21;
+    display: flex;
+    flex-direction:column;
+}
+.chat .chat_header{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background-color: #2A2F32;
+    border-right: 1px solid rgba(241,241,242,0.11);
+}
+.chat .chat_header .MuiAvatar-img {
+    background-color: grey;
+}
+.chat .chat_header .chat_header_info{ 
+    width: 100%;
+    color: white;
+    margin-left: 15px;
+    min-width: 100px;
+}
+.chat .chat_header .chat_header_info h3{ 
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 1px;
+}
+.chat .chat_header .chat_header_info p{ 
+    font-size: 13px;
+    color: grey;
+}
+.chat .chat_header .chat_headerRight{ 
+    display: flex;
+    align-items: center;
+    min-width: 30px;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+.chat .chat_header .chat_headerRight .MuiSvgIcon-root{ 
+    color: #b1b3b5;
+    margin: 8px;
+    margin-left: 14px;
+    border-radius:50%;
+    font-size: 24px !important;
+    margin-right: 10px;
+    cursor:pointer;
+}
+
+.chat .chat_body{ 
+    padding: 30px;
+    flex: 1;
+    background-image: url("https://www.rockandco.co.uk/wp-content/uploads/2017/02/sensa-moak-black-600x352.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: scroll;
+}
+.chat .chat_body .chat_message{ 
+    background-color:#2A2F32;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 16px;
+    position: relative;
+    width: fit-content;
+}
+.chat .chat_body .chat_message .chat_message_name{ 
+    position: absolute;
+    font-size: 10px;
+    top: -15px;
+    color: white;
+    left: 5px;
+    font-weight: 500;
+}
+.chat .chat_body .chat_message .chat_message_timestamp{
+    margin-left: 10px;
+    font-size: 10px;
+}
+.chat .chat_body .chat_message_reciever{ 
+    background-color:#075E54;
+    margin-left: auto;
+}
+.chat .chat_footer{ 
+    background-color:#2A2F32;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    bottom: 0;
+    right: 0;
+}
+
+.chat .chat_footer .MuiSvgIcon-root{ 
+    color: #b1b3b5;
+    margin: 5px 8px;
+    margin-top: 4px;
+    font-size: 28px;
+    cursor:pointer;
+}
+.chat .chat_footer .chat-footer-input{ 
+    background-color: #33383B;
+    /* width: 100% */
+    flex: 1;
+    margin: 0px 5px;
+    border-radius:200px;
+    
+}
+.chat .chat_footer .chat-footer-input input{ 
+    border: none;
+    background-color: #33383B;
+    font-size: 20px;
+    outline: none;
+    width: 90%;
+    color: #b1b3b5;
+    margin: 12px 20px;
+}
+.chat .chat_footer .chat-footer-input button{ 
+    display: none;
+}
+
+/* Login.js */
+.login {
+    flex: 1;
+    display: grid; 
+    place-items: center;
+}
+
+.login .login-box{
+    display: flex;
+    flex-direction: column;
+    min-height: 60vh;
+    width: 60vh;
+}
+
+.login .login-box .login-header{
+    background-color:#075E54;
+    padding: 10px 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid black;
+    border-bottom: none;
+    display: flex;
+    font-size: 18px;
+    /* color: grey; */
+}
+.login .login-box .login-header .MuiSvgIcon-root{
+    margin: 0px 10px;
+    font-size: 30px;
+    color: grey;
+}
+.login .login-box .login-body{  
+    padding: 50px 20px;
+    padding-bottom: 20px;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom: none;
+    flex: 1;
+}
+.login .login-box .login-body .input{  
+    border: none;
+    outline: none;
+    background-color: #262D31;
+    color: white;
+    border-bottom: 1px solid #075E54;
+    margin: 10px 20px;
+    padding: 20px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    width: 80%;
+}
+.login .login-box .login-body .error{  
+    font-size: 12px;
+    color: red;
+    margin: 10px 20px;
+    padding: 20px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    margin-top: 0px;
+    padding-top: 0px;
+    
+    width: 80%;
+}
+.login .login-box .login-body button{  
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #075E54;
+    color: white;
+    margin: 0px 20px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    margin-top: 40px;
+    width: 80%;
+}
+.login .login-box .login-footer{
+    background-color:#075E54;
+    padding: 10px 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid black;
+    border-top: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .login-box .login-footer .MuiSvgIcon-root{
+
+}
